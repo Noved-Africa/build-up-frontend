@@ -11,7 +11,7 @@ const testimonials = () => {
 			<Head>
 				<title>Testimonials | Build-Up Africa</title>
 			</Head>
-			<div className=' pt-[100px] '>
+			<div className=' pt-[98px] '>
 				<section className=' '>
 					<div className=' bg-[#D4EDDA] py-16  text-center '>
 						<h2 className=' faq_heading mb-4 text-[54px] font-bold'>

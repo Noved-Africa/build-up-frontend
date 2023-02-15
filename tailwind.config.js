@@ -13,6 +13,7 @@ module.exports = {
 			backgroundImage: {
 				image: "url('../../public/images/image.png')",
 				image1: "url('../../public/images/image1.png')",
+				imageCareer: "url('../../public/images/imageCareer.png')",
 				ourstory: "url('../../public/images/ourstory.png')",
 			},
 			// fontFamily: {

@@ -64,22 +64,26 @@ const ourstory = () => {
 
 				<section className=' px-[100px] pt-16 pb-20 '>
 					<div className=' flex space-x-6'>
+						<div className=' w-1/2 rounded-[10px] bg-[#D1F0DC] py-10 px-8 text-center '>
+							<h2 className=' faq_heading mb-4 text-[24px] font-bold text-[#145322] '>
+								Our Vision
+							</h2>
+							<p className=' w-full'>
+								We deliver full spectrum resources to upskill students for
+								employability purposes.
+							</p>
+						</div>
+
 						<div className=' w-1/2 rounded-[10px] bg-[#FFF9DC] py-10 px-8 text-center '>
-							<h2 className=' mb-4 text-[24px]  font-bold'>Our Mission</h2>
+							<h2 className=' faq_heading mb-4 text-[24px] font-bold  text-[#145322]'>
+								Our Mission
+							</h2>
 							<p className=' w-full'>
 								At Buildup Africa, our mission is to empower African
 								undergraduates and fresh graduates to become employing and
 								employable graduates. We believe that with the right education,
 								African undergraduates can become the entreprenuers and leaders
 								of today!
-							</p>
-						</div>
-
-						<div className=' w-1/2 rounded-[10px] bg-[#D1F0DC] py-10 px-8 text-center '>
-							<h2 className=' mb-4 text-[24px] font-bold '>Our Vision</h2>
-							<p className=' w-full'>
-								We deliver full spectrum resources to upskill students for
-								employability purposes.
 							</p>
 						</div>
 					</div>
@@ -167,7 +171,7 @@ const ourstory = () => {
 							tempor feugia
 						</p>
 						<div className=' flex justify-center '>
-							<button className=' flex h-fit items-center justify-center self-center bg-[#218B39] py-2 px-[23px]'>
+							<button className=' flex h-fit items-center justify-center self-center bg-[#218B39] py-2 px-[23px] text-white'>
 								Visit community page <HiArrowRight className=' ml-3' />
 							</button>
 						</div>
@@ -211,7 +215,7 @@ const ourstory = () => {
 								placeholder='Email address'
 								className=' py-[10px] px-4'
 							/>
-							<button className=' bg-[#218B39] px-8 py-2 '>Subscribe</button>
+							<button className=' bg-[#218B39]  px-8 py-2 '>Subscribe</button>
 						</form>
 					</div>
 				</section>
