@@ -9,18 +9,18 @@ const Contact = () => {
 				<title>Contact | Build-Up Africa</title>
 			</Head>
 			<div>
-				<section className='  flex px-[175px] pt-44 pb-24 '>
-					<div className=' z-0 w-3/4 max-w-[844px] space-y-8 rounded-[10px] bg-[#1E4262] pt-16 pb-[76px] pl-14  text-white'>
-						<p className=' faq_heading w-1/2 text-5xl font-bold'>
+				<section className='  flex flex-col px-4  pt-[120px] pb-24 md:flex-row md:px-[175px] md:pt-44 '>
+					<div className=' z-0 w-full max-w-[844px] space-y-8 rounded-[10px] bg-[#1E4262] px-4 pt-10 pb-10 text-center text-white md:w-3/4 md:px-0 md:pt-16 md:pb-[76px] md:pl-14  md:text-left'>
+						<p className=' faq_heading w-full text-[24px] font-bold md:w-1/2 md:text-5xl'>
 							Get in touch with us
 						</p>
-						<p className=' w-1/2 text-[16px]'>
+						<p className=' w-fit text-[16px] md:w-1/2'>
 							Praesent sapien massa, convallis a pellentesque nec, egestas non
 							nisi. Proineget.
 						</p>
 
 						{/* location  */}
-						<div className='flex'>
+						<div className='flex text-left'>
 							<FaMap className=' mr-4 h-7 w-7 text-[#28A745]' />
 							<div>
 								<p className=' font-bold'>Location</p>
@@ -29,7 +29,7 @@ const Contact = () => {
 						</div>
 
 						{/* telephone  */}
-						<div className='flex'>
+						<div className='flex text-left'>
 							<FaPhone className=' mr-4 h-7 w-7 text-[#28A745]' />
 
 							<div>
@@ -39,7 +39,7 @@ const Contact = () => {
 						</div>
 
 						{/* email  */}
-						<div className='flex'>
+						<div className='flex text-left'>
 							<FaEnvelope className=' mr-4 h-7 w-7 text-[#28A745]' />
 
 							<div>
@@ -49,7 +49,7 @@ const Contact = () => {
 						</div>
 					</div>
 
-					<div className=' z-10 my-5 -ml-52 w-1/2 rounded-[10px] bg-white p-[46px] shadow-2xl'>
+					<div className=' z-10 mt-10 w-full rounded-[10px] bg-white px-[20px] py-10 shadow-lg md:my-5 md:-ml-52 md:w-1/2 md:p-[46px] '>
 						<form className=' w-full space-y-[16px]'>
 							<div className=' w-full'>
 								<label className=' mb-[4px] pl-[10px]' htmlFor='fullname'>
@@ -102,14 +102,14 @@ const Contact = () => {
 					</div>
 				</section>
 
-				<section className=' overlay h-[682px] bg-image bg-cover bg-center bg-no-repeat text-white bg-blend-overlay '>
-					<div className=' to-#00160599 grid h-full w-full grid-cols-2 gap-20 bg-gradient-to-r from-[#218B3999] px-[140px] pt-[183px] backdrop-brightness-100'>
-						<div></div>
+				<section className=' overlay h-[324px] bg-image bg-cover bg-center bg-no-repeat text-white bg-blend-overlay md:h-[682px] '>
+					<div className=' to-#00160599 grid h-full w-full grid-cols-1 gap-20 bg-gradient-to-r from-[#218B3999] px-4 pt-[72px] text-center backdrop-brightness-100 md:grid-cols-2 md:px-[140px] md:pt-[183px]'>
+						<div className=' hidden md:block'></div>
 						<div className='  justify-self-end'>
-							<h2 className=' faq_heading mb-6 text-6xl font-bold'>
+							<h2 className=' faq_heading mb-4 px-12 text-[24px] font-bold md:mb-6 md:text-6xl'>
 								Check how we can help you
 							</h2>
-							<p className=' text-lg'>
+							<p className=' text-[16px] md:text-lg'>
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
 								posuere adipiscing convallis sit. Non, nunc adipiscing mi amet
 								tempor feugia

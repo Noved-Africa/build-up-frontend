@@ -65,7 +65,7 @@ const Footer = () => {
 
 			<div className=' mt-16 w-full md:mt-0 md:w-1/2'>
 				<div className='mb-16 grid h-fit grid-cols-2 justify-between gap-y-20 md:grid-cols-1 '>
-					<div className=' flex justify-between'>
+					<div className=' flex flex-col justify-between space-y-12 md:flex-row   md:space-y-0'>
 						<div className='h-fit'>
 							<h2 className=' mb-6 text-2xl font-bold'>Products</h2>
 							<div className=' space-y-[16px] '>
@@ -94,8 +94,8 @@ const Footer = () => {
 						</div>
 					</div>
 
-					<div className=' flex '>
-						<div className=' mr-32 h-fit'>
+					<div className=' flex flex-col-reverse justify-between md:flex-row md:justify-start  md:space-y-0 '>
+						<div className=' mr-0 h-fit md:mr-32'>
 							<h2 className=' mb-6 text-2xl font-bold'>Company</h2>
 							<div className=' space-y-[16px] '>
 								<p>Our Story</p>
@@ -116,7 +116,6 @@ const Footer = () => {
 								<p>Terms of Use</p>
 							</div>
 						</div>
-
 					</div>
 				</div>
 			</div>

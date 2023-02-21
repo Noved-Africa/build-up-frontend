@@ -90,13 +90,13 @@ const Faqs = () => {
 							/>
 						</div>
 					</div>
-					<div className=' my-[70px] flex gap-6  '>
+					<div className='my-[70px] flex gap-6'>
 						<div className=' h-fit w-1/3 bg-[#D4EDDA] py-10 px-8 '>
 							<p className=' mb-6 text-xl font-bold'>Category</p>
 							<div>
 								{/* <Link href=''></Link> */}
 								<ul className=' list-none space-y-2'>
-									{CATEGORIES.map((category  ) => (
+									{CATEGORIES.map((category) => (
 										<li
 											key={category}
 											className={`rounded-[3px] py-[8.5px] pl-8 capitalize ${

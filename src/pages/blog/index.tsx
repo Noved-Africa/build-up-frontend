@@ -1,37 +1,116 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
-import speaker from "./../../../public/images/speaker.jpeg";
+import Head from "next/head";
+// import speaker from "./../../../public/images/blog1.jpeg";
+// import { blogContent } from "@/contents/blogContent";
+import BlogArticle from "@/components/BlogArticle";
+import BlogArticleCard from "@/components/BlogArticleCard";
+import { BlogContent, blogDemoData } from "@/contents/blogContent";
+import { AiOutlineSearch } from "react-icons/ai";
+import FeaturedBlogCard from "@/components/FeaturedBlogCard";
 
-const index = () => {
+const CATEGORIES = ["all", "events", "academics", "stories", "community"];
+
+const Blog = () => {
+	const [activeCategory, setActiveCategory] = useState<
+		"all" | "events" | "academics" | "stories" | "community"
+	>("all");
+	const blogData = blogDemoData;
+
 	return (
-		<div className=' pt-[70px]'>
-			<div className=' flex w-full flex-row items-center'>
-				<div className=' faq_heading w-1/3 bg-[#218B39] px-4 py-6 text-[14px] text-white'>
-					<h2 className=' w-full font-bold '>BUA Blog</h2>
-				</div>
-				<div className=' p-4 text-[12px]'>
-					<p className=' '>
-						Lorem ipsum dolor sit amet, consectetur ing elit. Q posuere
-						adipiscing dkserr con.
+		<>
+			<Head>
+				<title>Blog | Build-Up Africa</title>
+			</Head>
+			<div className=' pt-[70px] md:pt-[96px]'>
+				<div className='  flex h-full items-center '>
+					<h2 className=' faq_heading w-fit flex-shrink-0 bg-[#218B39] px-4 py-6 text-[14px] font-bold text-white md:px-[100px] md:py-[38px] md:pr-[100px] md:text-[36px]'>
+						BUA Blog
+					</h2>
+					<p className='  line-clamp-2 truncate px-4 md:pl-[60px]'>
+						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum ex
+						at autem{" "}
 					</p>
 				</div>
-			</div>
-			<section className='  px-4 pt-[40px]  '></section>
-
-			<section className=" px-4">
-				<div></div>
-				<article className=' space-y-[24.5px] '>
-					<div className=' h-[240px]'>
-						<Image
-							src={speaker}
-							alt={"speaker"}
-							className=' w-full object-cover object-center'
-						/>
+				{/* <div className=' items-center flex  faq_heading  w-fit  py-6 md:px-[100px]  md:py-[38px]'>
+						<h2 className=' px-4 bg-[#218B39] text-[12px] font-bold text-white md:text-[36px] '>
+							BUA Blog
+						</h2>
+						<p className='p-4 text-[14px] md:pl-[60px] '>
+							Lorem ipsum dolor sit amet, consectetur ing elit. Q posuere
+							adipiscing dkserr con.
+						</p>
+					</div> */}
+				<section className=' px-4 md:px-[100px] '>
+					<div className=' flex flex-col-reverse items-center md:flex-row md:justify-between  md:py-6'>
+						<p className=' self-start py-4 font-bold text-[#218B39] md:self-center md:py-0 '>
+							ALL FEATURED ARTICLES
+						</p>
+						<div className=' relative w-full py-4  md:w-fit md:py-0 '>
+							<input
+								type='text'
+								placeholder='Search by event'
+								className=' w-full rounded-[3px] border bg-gray-100 p-2 outline-none  '
+							/>
+							<AiOutlineSearch className=' absolute right-2 top-6 h-6 w-6 bg-gray-100 md:top-2 ' />
+						</div>
 					</div>
-				</article>
-			</section>
-		</div>
+				</section>
+
+				<section className=' flex gap-24 overflow-x-scroll px-4 pt-6 md:px-[100px] md:pt-10 '>
+					<FeaturedBlogCard />
+					<FeaturedBlogCard />
+				</section>
+
+				{/* <section className=' px-4'>
+					<div></div>
+					<article className=' space-y-[24.5px] '>
+						<div className=' h-[240px]'>
+							<Image
+								src={speaker}
+								alt={"speaker"}
+								className=' w-full object-cover object-center'
+							/>
+						</div>
+					</article>
+				</section> */}
+
+				<section className=' mt-16'>
+					<div className='bg-[#F7F7F7] px-4 py-8 md:px-[100px]'>
+						<div className=' flex w-full space-x-6 overflow-x-scroll  '>
+							{CATEGORIES.map((category) => (
+								<p
+									key={category}
+									onClick={() => setActiveCategory(category)}
+									className={` cursor-pointer rounded-[3px]  px-3  py-[6px] capitalize  ${
+										activeCategory === category
+											? "bg-[#218B39] text-white"
+											: "bg-[#EBEBEB] text-black"
+									}`}>
+									{category}
+								</p>
+							))}
+						</div>
+					</div>
+					<div className=' px-4 py-16 md:px-[100px]'>
+						<div className=' grid grid-cols-1 gap-x-10 gap-y-16 md:grid-cols-3'>
+							{blogData
+								.filter((blog) => blog.category === activeCategory)
+								.map((blog: BlogContent) => (
+									<BlogArticleCard
+										key={blog.id}
+										id={blog.id}
+										category={blog.category}
+										title={blog.title}
+										content={blog.content}
+									/>
+								))}
+						</div>
+					</div>
+				</section>
+			</div>
+		</>
 	);
 };
 
-export default index;
+export default Blog;
