@@ -72,6 +72,7 @@ const Navbar = () => {
 						)}
 					</div>
 				</div>
+				
 				<div
 					className={` ${
 						isOpen ? "left-0 right-0 " : " -left-[200px]"

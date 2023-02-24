@@ -1,8 +1,8 @@
 import React from "react";
 import Head from "next/head";
 import Image from "next/image";
-import OurStory from "./../../public/images/ourstory.jpeg";
-import emailCampaign from "./../../public/images/Email_Campaign.svg";
+import OurStory from "/public/images/ourstory.jpeg";
+import emailCampaign from "/public/images/Email_Campaign.svg";
 import { HiArrowRight } from "react-icons/hi";
 import Newsletter from "@/components/newsletter";
 

@@ -11,33 +11,37 @@ const testimonials = () => {
 			<Head>
 				<title>Testimonials | Build-Up Africa</title>
 			</Head>
-			<div className=' pt-[98px] '>
-				<section className=' '>
-					<div className=' bg-[#D4EDDA] py-16  text-center '>
-						<h2 className=' faq_heading mb-4 text-[54px] font-bold'>
+			<div className=' pt-[70px] md:pt-[98px] '>
+				<section className='  '>
+					<div className=' bg-[#D4EDDA] px-4 py-[138px] text-center  md:py-16 '>
+						<h2 className=' faq_heading mb-4 text-[30px] font-bold md:text-[54px]'>
 							BUA Testimonials
 						</h2>
-						<p className=' mx-auto max-w-2xl text-center'>
+						<p className=' mx-auto max-w-2xl text-center text-sm md:text-[16px]'>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
 							posuere adipiscing convallis sit. Non, nunc adipiscing mi amet
 							tempor feugia
 						</p>
 					</div>
 				</section>
-				<section className=' flex justify-between bg-[#149844] px-[206px] py-[68px] text-white'>
+				<section className=' flex gap-[50px] bg-[#149844] px-5 py-[34px] text-white md:gap-[200px] md:px-[206px] md:py-[68px]'>
 					<div className=' text-center '>
-						<h2 className=' text-[57px] font-bold  '>#1</h2>
-						<p className=' text-[24px] font-bold '>Community</p>
+						<h2 className=' text-[30px] font-bold md:text-[57px]  '>#1</h2>
+						<p className=' text-sm font-bold md:text-[24px] '>Community</p>
 					</div>
 
 					<div className=' text-center '>
-						<h2 className=' text-[57px] font-bold  '>5+</h2>
-						<p className=' text-[24px] font-bold '>Campus events yearly</p>
+						<h2 className=' text-[30px] font-bold md:text-[57px]  '>5+</h2>
+						<p className=' text-sm font-bold md:text-[24px] '>
+							Campus events yearly
+						</p>
 					</div>
 
 					<div className=' text-center '>
-						<h2 className=' text-[57px] font-bold  '>#1</h2>
-						<p className=' text-[24px] font-bold '>Job marketplace</p>
+						<h2 className=' text-[30px] font-bold md:text-[57px]  '>#1</h2>
+						<p className=' text-sm font-bold md:text-[24px] '>
+							Job marketplace
+						</p>
 					</div>
 				</section>
 				<section className=' flex items-center justify-between py-12 px-[100px]'>
@@ -129,7 +133,7 @@ const testimonials = () => {
 					</div>
 
 					<div className=' px-[100px] py-20'>
-						<div className='  w-full flex flex-row space-x-8 overflow-x-scroll'>
+						<div className='  flex w-full flex-row space-x-8 overflow-x-scroll'>
 							<article className=' w-[753px] rounded-2xl bg-gradient-to-r from-[#D4EDDA] to-[#93D3A2] p-8 '>
 								<div className=' mb-8 flex space-x-6'>
 									<Image

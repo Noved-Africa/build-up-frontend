@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Image from "next/image";
 import Head from "next/head";
 // import speaker from "./../../../public/images/blog1.jpeg";
@@ -8,14 +8,47 @@ import BlogArticleCard from "@/components/BlogArticleCard";
 import { BlogContent, blogDemoData } from "@/contents/blogContent";
 import { AiOutlineSearch } from "react-icons/ai";
 import FeaturedBlogCard from "@/components/FeaturedBlogCard";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { BsDot } from "react-icons/bs";
 
-const CATEGORIES = ["all", "events", "academics", "stories", "community"];
+const otherCategories = ["events", "academics", "stories", "community"];
+const CATEGORIES = ["all", ...otherCategories];
+// const filterItems = (category) => {
+// if (category === "all") {
+// setBlogData(blogDemoData);
+// return;
+// }
+// const newData = blogDemoData.filter((blog) => blog.category === category);
+// setBlogData(newData);
+
+// function filterCategory()=>{
+// 	 if (category === "all") {
+// setBlogData(blogDemoData);
+// return;
+// }
 
 const Blog = () => {
+	const [blogData, setBlogData] = useState<BlogContent[]>(blogDemoData);
+	// const [currentIndex, setCurrentIndex] = useState(0);
+	const sliderRef = useRef<HTMLDivElement>(null);
 	const [activeCategory, setActiveCategory] = useState<
 		"all" | "events" | "academics" | "stories" | "community"
 	>("all");
-	const blogData = blogDemoData;
+
+	function onNextClick() {
+		if (sliderRef.current) {
+			// let updatedTranslateX = translateX - getTranslateXValue();
+			sliderRef.current.style.transform = `translateX(100%)`;
+			// setTranslateX();
+		}
+	}
+	function onPrevClick() {
+		if (sliderRef.current) {
+			// let updatedTranslateX = translateX + getTranslateXValue();
+			sliderRef.current.style.transform = `translateX(-100%)`;
+			// setTranslateX(updatedTranslateX);
+		}
+	}
 
 	return (
 		<>
@@ -57,11 +90,30 @@ const Blog = () => {
 					</div>
 				</section>
 
-				<section className=' flex gap-24 overflow-x-scroll px-4 pt-6 md:px-[100px] md:pt-10 '>
-					<FeaturedBlogCard />
-					<FeaturedBlogCard />
-				</section>
+				{/* slider section */}
+				<section className=' overflow-hidden px-4 pt-6 md:px-[100px] md:pt-10 '>
+					<div ref={sliderRef} className='relative flex gap-24  '>
+						{blogData.map(({ id, ...blog }: BlogContent) => (
+							<FeaturedBlogCard key={id} {...blog} />
+						))}
+					</div>
+					<div className=' mx-auto mt-16 flex w-fit space-x-2 '>
+						<button
+							onClick={onPrevClick}
+							className=' rounded-full bg-green-600 p-1 text-white'>
+							<IoIosArrowBack className='h-6 w-6' />
+						</button>
 
+						<div>
+							<BsDot className='h-6 w-6' />
+						</div>
+						<button
+							onClick={onNextClick}
+							className=' rounded-full bg-green-600 p-1 text-white'>
+							<IoIosArrowForward className='h-6 w-6' />
+						</button>
+					</div>
+				</section>
 				{/* <section className=' px-4'>
 					<div></div>
 					<article className=' space-y-[24.5px] '>
@@ -95,15 +147,13 @@ const Blog = () => {
 					<div className=' px-4 py-16 md:px-[100px]'>
 						<div className=' grid grid-cols-1 gap-x-10 gap-y-16 md:grid-cols-3'>
 							{blogData
-								.filter((blog) => blog.category === activeCategory)
-								.map((blog: BlogContent) => (
-									<BlogArticleCard
-										key={blog.id}
-										id={blog.id}
-										category={blog.category}
-										title={blog.title}
-										content={blog.content}
-									/>
+								.filter((blog) =>
+									activeCategory === "all"
+										? true
+										: blog.category === activeCategory
+								)
+								.map(({ id, ...blog }: BlogContent) => (
+									<BlogArticleCard key={id} {...blog} />
 								))}
 						</div>
 					</div>
