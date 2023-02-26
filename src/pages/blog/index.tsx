@@ -65,15 +65,10 @@ const Blog = () => {
 						at autem{" "}
 					</p>
 				</div>
-				{/* <div className=' items-center flex  faq_heading  w-fit  py-6 md:px-[100px]  md:py-[38px]'>
-						<h2 className=' px-4 bg-[#218B39] text-[12px] font-bold text-white md:text-[36px] '>
-							BUA Blog
-						</h2>
-						<p className='p-4 text-[14px] md:pl-[60px] '>
-							Lorem ipsum dolor sit amet, consectetur ing elit. Q posuere
-							adipiscing dkserr con.
-						</p>
-					</div> */}
+
+
+				{/* featured articles section */}
+				
 				<section className=' px-4 md:px-[100px] '>
 					<div className=' flex flex-col-reverse items-center md:flex-row md:justify-between  md:py-6'>
 						<p className=' self-start py-4 font-bold text-[#218B39] md:self-center md:py-0 '>
