@@ -51,7 +51,7 @@ function Photos() {
 								type='text'
 								placeholder='Search by event'
 								className=' w-full rounded-[3px] border bg-gray-100 p-2 outline-none  '
-							/>
+/>
 							<AiOutlineSearch className=' absolute right-2 top-6 h-6 w-6 bg-gray-100 md:top-2 ' />
 						</div>
 					</div>
