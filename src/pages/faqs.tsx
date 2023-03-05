@@ -68,13 +68,13 @@ const Faqs = () => {
 			<Head>
 				<title>FAQs | Build-Up Africa</title>
 			</Head>
-			<div className=' mx-auto max-w-6xl pt-[100px] '>
-				<div className=' mt-14 '>
-					<div className=' flex justify-between '>
-						<p className='faq_heading text-5xl font-bold text-[#218B39] '>
+			<div className=' mx-auto max-w-6xl pt-[70px] md:pt-[100px] '>
+				<div className=' mt-6 md:mt-14 '>
+					<div className=' flex flex-col md:flex-row md:justify-between '>
+						<p className='faq_heading text-2xl text-center font-bold text-[#218B39] md:text-5xl '>
 							Frequently Asked Questions
 						</p>
-						<div className=' relative flex items-center  justify-center '>
+						<div className=' hidden relative md:flex items-center  justify-center '>
 							<input
 								className=' rounded-[3px] border-2 border-[#E1E1E1] px-2 pt-[10px] pb-[7px] outline-none '
 								type='text'
@@ -90,8 +90,8 @@ const Faqs = () => {
 							/>
 						</div>
 					</div>
-					<div className='my-[70px] flex gap-6'>
-						<div className=' h-fit w-1/3 bg-[#D4EDDA] py-10 px-8 '>
+					<div className='my-[70px] flex flex-col md:flex-row gap-6'>
+						<div className=' h-fit md:w-1/3 bg-[#D4EDDA] py-10 px-4 md:px-8 '>
 							<p className=' mb-6 text-xl font-bold'>Category</p>
 							<div>
 								{/* <Link href=''></Link> */}
@@ -111,7 +111,7 @@ const Faqs = () => {
 								</ul>
 							</div>
 						</div>
-						<div className=' w-2/3 px-[35px] shadow-lg'>
+						<div className=' md:w-2/3 px-4 md:px-[35px] shadow-lg'>
 							<div>
 								{faqs
 									.filter((faq) => faq.category === activeCategory)
