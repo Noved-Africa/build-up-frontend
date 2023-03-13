@@ -31,9 +31,7 @@ const Blog = () => {
 	const [blogData, setBlogData] = useState<BlogContent[]>(blogDemoData);
 	// const [currentIndex, setCurrentIndex] = useState(0);
 	const sliderRef = useRef<HTMLDivElement>(null);
-	const [activeCategory, setActiveCategory] = useState<
-		"all" | "events" | "academics" | "stories" | "community"
-	>("all");
+	const [activeCategory, setActiveCategory] = useState("all");
 
 	function onNextClick() {
 		if (sliderRef.current) {
@@ -45,7 +43,8 @@ const Blog = () => {
 	function onPrevClick() {
 		if (sliderRef.current) {
 			// let updatedTranslateX = translateX + getTranslateXValue();
-			sliderRef.current.style.transform = `translateX(-100%)`;
+			sliderRef.current.style.transform = `translateX(
+				-100%)`;
 			// setTranslateX(updatedTranslateX);
 		}
 	}
