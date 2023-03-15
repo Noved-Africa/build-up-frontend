@@ -36,18 +36,26 @@ const Blog = () => {
 	function onNextClick() {
 		if (sliderRef.current) {
 			// let updatedTranslateX = translateX - getTranslateXValue();
-			sliderRef.current.style.transform = `translateX(100%)`;
+			sliderRef.current.style.transform = `translateX(-100%)`;
 			// setTranslateX();
 		}
 	}
 	function onPrevClick() {
 		if (sliderRef.current) {
 			// let updatedTranslateX = translateX + getTranslateXValue();
-			sliderRef.current.style.transform = `translateX(
-				-100%)`;
+			sliderRef.current.style.transform = `translateX(100%)`;
 			// setTranslateX(updatedTranslateX);
 		}
 	}
+
+		// function getTranslateXValue() {
+		// 	let translateX = 0;
+		// 	if (sliderRef.current) {
+		// 		translateX =
+					
+		// 	}
+		// 	return translateX;
+		// }
 
 	return (
 		<>
