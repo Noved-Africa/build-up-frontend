@@ -9,12 +9,12 @@ const Faq:FC<Props> = ({question, answer}) => {
 	const [showInfo, setShowInfo] = useState(false);
 
 	return (
-		<div className=' border-b py-6'>
+		<div className=' border-b py-4 md:py-6'>
 			<div
 				onClick={() => {
 					setShowInfo(!showInfo);
 				}}
-				className=' flex cursor-pointer items-center justify-between pb-[11px]  text-lg'>
+				className=' flex cursor-pointer items-center justify-between pb-[11px] text-[16px] md:text-lg'>
 				<p>{question}</p>
 				{showInfo ? (
 					<Image
