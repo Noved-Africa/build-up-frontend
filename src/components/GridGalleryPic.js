@@ -16,7 +16,7 @@ export default function GridGallery({ images }) {
   };
 
   return (
-    <div className="grid lg:grid-cols-3 gap-3 xsm:grid-cols-2 mx-auto xsm:p-3">
+    <div className="grid md:grid-cols-3 gap-3">
       {images &&
         images.map((imageUrl, index) => (
           <VisibilitySensor

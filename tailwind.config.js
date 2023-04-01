@@ -27,10 +27,10 @@ module.exports = {
 			'xsm': '300px',
 			// => @media (min-width:200px) { ... }
 
-      'sm': '640px',
+      'sm': '320px',
       // => @media (min-width: 640px) { ... }
 
-      'md': '768px',
+      'md': '960px',
       // => @media (min-width: 768px) { ... }
 
       'lg': '1024px',

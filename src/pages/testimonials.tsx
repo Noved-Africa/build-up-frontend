@@ -57,11 +57,11 @@ const testimonials = () => {
 							</p>
 						</div>
 
-						<h2 className=' faq_heading text-lg font-bold md:w-4/5 md:text-3xl '>
+						<h2 className=' faq_heading text-lg font-bold md:w-11/12 md:text-3xl '>
 							Our mission is to empower young African undergraduates and fresh
 							graduates
 						</h2>
-						<div className=' h-[405px] w-full rounded-lg py-4 md:hidden md:w-[478px]'>
+						<div className=' h-[405px] w-full rounded-lg py-4 md:hidden md:w-[278px]'>
 							<Image
 								src={OurStory}
 								alt=''
