@@ -45,23 +45,23 @@ function EventVideos() {
 						<p className='self-start py-4 font-bold text-green-700 lg:ml-32 md:self-center md:py-0 xxsm:hidden'>
 							ALL VIDEOS
 						</p>
-						<div className='relative w-full py-4  md:w-fit md:py-0 '>
+						<div className='relative py-4 ml-auto md:w-80 md:py-0 '>
 							<input
 								type='text'
 								placeholder='Search by event'
-								className='xxsm:w-full rounded-[3px] border bg-gray-100 p-2 outline-none  '
+								className='xxsm:w-full rounded-[3px] border bg-gray-100 p-2 outline-none'
 							/>
 							<AiOutlineSearch className=' absolute right-2 top-6 h-6 w-10 bg-gray-100 md:top-2 inset-y-0 right-0' />
 						</div>
 					</div>
 				</section>
 
-				<main className='lg:grid lg:grid-cols-7 lg:gap-4 md:grid-cols-1 xxsm:ml-5'>
-					<aside className='p-10'>
-						<h1 className='font-bold text-xl -mt-10 xxsm:-ml-10'>CATEGORIES</h1>
+				<main className='lg:grid mr-5 lg:grid-cols-5 lg:gap-4  xxsm:ml-5 mx-auto'>
+					<aside className='m-10 lg:ml-20 z-40   lg:mt-1 sm:-mt-10 sm:absolute'>
+						<h1 className='font-bold text-xl xxsm:-ml-10'>CATEGORIES</h1>
 						<DropDown />
 					</aside>
-					<section className='col-start-2 col-end-8'>
+					<section className='lg:col-start-2 col-end-8'>
 						{/* Video Gallery */}
 						<GridGallery video={video} />
 

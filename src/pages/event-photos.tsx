@@ -85,7 +85,7 @@ import UpcomingEvents from '../components/UpcomingEvents'
 import DropDown from '../components/DropDown'
 
 
-function EventVideos() {
+function EventPhotos() {
 
 	const [showChild, setShowChild] = useState(false)
 
@@ -153,4 +153,4 @@ function EventVideos() {
 
 }
 
-export default EventVideos
+export default EventPhotos
