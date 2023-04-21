@@ -24,7 +24,7 @@ const careers = () => {
 					<div className=' to-#00160599 grid h-full w-full grid-cols-2 gap-20 bg-gradient-to-r from-[#218B3999] px-[140px] pt-[183px] backdrop-brightness-100'></div>
 				</div>
 
-				<div className=' mx-auto max-w-6xl px-4 md:px-0'>
+				<div className=' mx-auto md:mx-10 max-w-6xl px-4 md:px-0'>
 					<div className='mt-10 mb-6 max-w-[602px] text-center md:mb-14 md:mt-20 md:text-left '>
 						<h2 className=' faq_heading mb-4 text-[24px] font-bold md:mb-6 md:text-[40px]'>
 							Why work with USC Africa?
@@ -35,8 +35,8 @@ const careers = () => {
 							tempor feugia
 						</p>
 					</div>
-					<div className=' grid grid-cols-1 gap-6 md:grid-cols-3'>
-						<div className='user_center  rounded-[5px] p-6 shadow-lg hover:bg-[#D4EDDA]'>
+					<div className=' grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 '>
+						<div className='user_center md:w-80 md:ml-20 rounded-[5px] p-6 shadow-lg hover:bg-[#D4EDDA]'>
 							<div className=' mb-3 w-fit rounded-full bg-white p-4 shadow-md'>
 								<AiOutlineShop className=' h-6 w-6' />
 							</div>
@@ -47,7 +47,7 @@ const careers = () => {
 								tempor feugia
 							</p>
 						</div>
-						<div className='user_center rounded-[5px] p-5 shadow-lg hover:bg-[#D4EDDA]'>
+						<div className='user_center rounded-[5px] lg:ml-40 md:w-80 p-5 shadow-lg hover:bg-[#D4EDDA]'>
 							<div className=' mb-3 w-fit rounded-full bg-white p-4 shadow-md'>
 								<AiOutlineShop className=' h-6 w-6' />
 							</div>
@@ -58,13 +58,13 @@ const careers = () => {
 								tempor feugia
 							</p>
 						</div>
-						<div className='user_center rounded-[5px] p-5 shadow-lg hover:bg-[#D4EDDA]'>
+						<div className='user_center rounded-[5px] md:ml-60 md:w-80 p-5 shadow-lg hover:bg-[#D4EDDA]'>
 							<div className=' mb-3 w-fit rounded-full bg-white p-4 shadow-md'>
 								<AiOutlineShop className=' h-6 w-6' />
 							</div>
 							<h2 className=' mb-3 font-bold'>User Centered</h2>
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis
+								Lorem ipsum sit amet, consectetur adipiscingdolor sit amet, consectetur adipiscing elit. Quis
 								posuere adipiscing convallis sit. Non, nunc adipiscing mi amet
 								tempor feugia
 							</p>
@@ -72,8 +72,8 @@ const careers = () => {
 					</div>
 
 					<div className=' mt-12 md:mt-24'>
-						<div className=' mx-auto max-w-xl justify-center text-center'>
-							<h2 className=' faq_heading mx-auto mb-4 w-fit text-[24px] font-bold md:mb-6 md:text-[40px]'>
+						<div className=' mx-auto max-w-xl lg:ml-96 justify-center text-center'>
+							<h2 className=' faq_heading mx-auto mb-4 md:ml-20 w-fit text-[24px] font-bold md:mb-6 md:text-[40px]'>
 								Our openings
 							</h2>
 							<p className=' text-[#3A3A3A]'>
@@ -260,7 +260,7 @@ const careers = () => {
 							</p>
 						</div>
 
-						<div className=' mt-10 mb-24 grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-12 md:px-[88px] '>
+						<div className=' mt-10 mb-24 grid grid-cols-1 gap-2 md:grid-cols-1 md:gap-12 md:px-[88px] '>
 							<div className=' flex items-start justify-center'>
 								<p className=' flex h-8 w-12 items-center justify-center self-start rounded-full bg-[#218B39] text-[20px] font-bold text-white'>
 									1
