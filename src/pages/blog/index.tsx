@@ -10,6 +10,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 import FeaturedBlogCard from "@/components/FeaturedBlogCard";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { BsDot } from "react-icons/bs";
+import Newsletter from "@/components/newsletter";
 
 const otherCategories = ["events", "academics", "stories", "community"];
 const CATEGORIES = ["all", ...otherCategories];
@@ -128,7 +129,7 @@ const Blog = () => {
 						</div>
 					</article>
 				</section> */}
-
+						{/*  */}
 				<section className=' mt-16'>
 					<div className='bg-[#F7F7F7] px-4 py-8 md:px-[100px]'>
 						<div className=' flex w-full space-x-6 overflow-x-scroll  '>
@@ -147,7 +148,7 @@ const Blog = () => {
 						</div>
 					</div>
 					<div className=' px-4 py-16 md:px-[100px]'>
-						<div className=' grid grid-cols-1 gap-x-10 gap-y-16 md:grid-cols-3'>
+						<div className=' grid grid-cols-3 gap-x-10 gap-y-16'>
 							{blogData
 								.filter((blog) =>
 									activeCategory === "all"
@@ -160,6 +161,7 @@ const Blog = () => {
 						</div>
 					</div>
 				</section>
+				<Newsletter />
 			</div>
 		</>
 	);
