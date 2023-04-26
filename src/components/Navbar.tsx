@@ -29,7 +29,7 @@ const Navbar = () => {
 					</Link>
 
 					{/* link on the desktop screen */}
-					<div className=' hidden items-center md:flex'>
+					<div className='hidden items-center xl:flex'>
 						<ul className=' flex items-center justify-between space-x-6'>
 							<Link href='/products' className=' flex items-center  px-3 py-2 '>
 								<li className=' mr-3'>Our Products</li>
@@ -64,11 +64,11 @@ const Navbar = () => {
 					{/* hamburger for mobile menu  */}
 					<div
 						onClick={toggleNavbar}
-						className='h-6 w-6 cursor-pointer text-[#218B39] duration-500 md:hidden'>
+						className='h-6 w-6 cursor-pointer text-[#218B39] duration-3500 xl:hidden'>
 						{isOpen ? (
 							<IoIosClose className='h-full w-full ' />
 						) : (
-							<HiMenuAlt3 className=' h-full w-full  rotate-180 md:hidden ' />
+							<HiMenuAlt3 className=' h-full w-full  rotate-180 xl:hidden ' />
 						)}
 					</div>
 				</div>
@@ -76,7 +76,7 @@ const Navbar = () => {
 				<div
 					className={` ${
 						isOpen ? "left-0 right-0 " : " -left-[200px]"
-					} absolute top-[68px] z-20 h-screen bg-white duration-500 md:hidden`}>
+					} absolute top-[68px] z-20 h-screen bg-white duration-500 xl:hidden`}>
 					<div className=' '>
 						<div
 							onClick={toggleNavbar}

@@ -68,7 +68,7 @@ const Blog = () => {
 					<h2 className=' faq_heading w-fit flex-shrink-0 bg-[#218B39] px-4 py-6 text-[14px] font-bold text-white md:px-[100px] md:py-[38px] md:pr-[100px] md:text-[36px]'>
 						BUA Blog
 					</h2>
-					<p className='  line-clamp-2 truncate px-4 md:pl-[60px]'>
+					<p className='  line-clamp-2 truncate md:mr-10 px-4 md:pl-[60px]'>
 						Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum ex
 						at autem{" "}
 					</p>
@@ -148,7 +148,7 @@ const Blog = () => {
 						</div>
 					</div>
 					<div className=' px-4 py-16 md:px-[100px]'>
-						<div className=' grid grid-cols-3 gap-x-10 gap-y-16'>
+						<div className=' grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-16'>
 							{blogData
 								.filter((blog) =>
 									activeCategory === "all"
