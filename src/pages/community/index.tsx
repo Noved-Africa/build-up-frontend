@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import Image from "next/image";
 import Head from "next/head";
 import Newsletter from "@/components/newsletter";
-import community1 from "public/images/community1.jpg"
+import image1 from "public/images/image1.png"
 import image from "public/images/image.png"
 import { HiOutlineLightBulb } from "react-icons/hi";
 
@@ -22,7 +22,7 @@ const community = () => {
         <p className="mt-10 text-lg w-64 rounded pt-1 text-center bg-green-600 h-10"><a href="#">Join the community</a></p>
       </div>
       
-      <Image className="" src={community1} alt="community_image" width={1600} height={500}/>
+      <Image className="" src={image1} alt="community_image" width={1600} height={500}/>
       <svg className="lg:-mt-60 sm:-mt-40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" d="M0,64L120,85.3C240,107,480,149,720,149.3C960,149,1200,107,1320,85.3L1440,64L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
       
       <main className="mx-10 -mt-20">
