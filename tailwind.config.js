@@ -41,7 +41,16 @@ module.exports = {
 
       '2xl': '1536px',
       // => @media (min-width: 1536px) { ... }
-    }
+    },
+
+		fontFamily: {
+			'cursive': 'cursive',
+			'Verdana' : 'Verdana',
+			'Consolas' : 'Consolas',
+			'Perpetua' : 'Perpetua',
+			'Martel' : 'Martel'
+
+		}
 
 	},
 	plugins: [require('@tailwindcss/aspect-ratio')],
